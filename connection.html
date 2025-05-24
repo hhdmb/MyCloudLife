@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Connexion - MyCloudLife</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    body {
+      background: linear-gradient(to top, #d0eaff, #ffffff);
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow-x: hidden;
+    }
+
+    .wrapper {
+      display: flex;
+      flex-wrap: wrap;
+      background: white;
+      border-radius: 20px;
+      box-shadow: 0 0 30px rgba(0,0,0,0.1);
+      overflow: hidden;
+      max-width: 1000px;
+      width: 100%;
+      margin: 2rem;
+      animation: fadeIn 1s ease-in-out;
+    }
+
+    .intro, .form-section {
+      flex: 1 1 500px;
+      padding: 3rem;
+    }
+
+    .intro {
+      background: url('https://i.imgur.com/z5H4H0D.png') no-repeat center/cover;
+      color: white;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      background-blend-mode: overlay;
+      background-color: rgba(0, 104, 255, 0.6);
+    }
+
+    .intro h1 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+
+    .intro p {
+      font-size: 1.1rem;
+    }
+
+    .form-section h2 {
+      color: #007BFF;
+      margin-bottom: 2rem;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+    }
+
+    input[type="email"],
+    input[type="password"] {
+      padding: 1rem;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      margin-bottom: 1rem;
+      background: #f9f9f9;
+      transition: border 0.3s ease;
+    }
+
+    input:focus {
+      border-color: #007BFF;
+      outline: none;
+    }
+
+    button {
+      background-color: #FFC107;
+      color: white;
+      padding: 1rem;
+      font-weight: bold;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background 0.3s ease, transform 0.2s;
+    }
+
+    button:hover {
+      background-color: #e0a800;
+      transform: translateY(-2px);
+    }
+
+    .form-footer {
+      font-size: 0.9rem;
+      margin-top: 1rem;
+    }
+
+    .form-footer a {
+      color: #007BFF;
+      text-decoration: none;
+    }
+
+    .form-footer a:hover {
+      text-decoration: underline;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @media screen and (max-width: 768px) {
+      .wrapper {
+        flex-direction: column;
+        margin: 0;
+        border-radius: 0;
+      }
+      .intro {
+        display: none;
+      }
+      .form-section {
+        padding: 2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrapper">
+    <div class="intro">
+      <h1>Ravi de vous revoir !</h1>
+      <p>Connectez-vous pour retrouver vos fichiers en toute sécurité sur MyCloudLife.</p>
+    </div>
+    <div class="form-section">
+      <h2>Connexion</h2>
+      <form>
+        <input type="email" placeholder="Email" required />
+        <input type="password" placeholder="Mot de passe" required />
+        <button type="submit">Se connecter</button>
+        <div class="form-footer">
+          Vous n'avez pas encore de compte ? <a href="inscription.html">Inscrivez-vous</a>
+        </div>
+      </form>
+    </div>
+  </div>
+</body>
+</html>
